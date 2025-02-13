@@ -1,12 +1,11 @@
-package org.example;
+package com.example;
 
-import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class Main {
     public static void main(String[] args) {
         // Load Spring configuration from XML
-        ApplicationContext context = new ClassPathXmlApplicationContext("spring-config.xml");
+        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("spring-config.xml");
 
         // Retrieve the bean from Spring container
         StudentService studentService = (StudentService) context.getBean("studentService");
@@ -18,7 +17,7 @@ public class Main {
         st.displayStudentInfo();
 
         // Close context
-        ((ClassPathXmlApplicationContext) context).close();
+        context.close();
 
     }
 }

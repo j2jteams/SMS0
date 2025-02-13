@@ -5,14 +5,13 @@
            http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <!-- Define a bean for StudentService -->
-    <bean id="studentService" class="org.example.StudentService"/>
-    <!--<bean id="employee" class="org.example.Employee"/> -->
-    <bean id="course" class="org.example.Course">
+    <bean id="studentService" class="com.example.service.StudentService"/>
+    <bean id="course" class="com.example.service.Course">
         <constructor-arg value="Spring Framework Basics"/>
     </bean>
 
     <!-- Define Student Bean with Constructor Injection -->
-    <bean id="student" class="org.example.Student">
+    <bean id="student" class="com.example.service.Student">
         <constructor-arg value="John Doe"/>
         <constructor-arg value="20"/>
         <constructor-arg ref="course"/>

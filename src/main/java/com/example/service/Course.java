@@ -1,4 +1,4 @@
-package org.example;
+package com.example.service;
 
 public class Course {
     private String courseName;

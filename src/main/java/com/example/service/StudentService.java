@@ -1,4 +1,4 @@
-package org.example;
+package com.example.service;
 
 public class StudentService {
     public void displayStudent() {
